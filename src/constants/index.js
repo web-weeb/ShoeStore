@@ -17,10 +17,18 @@ export const navLinks = [
 
 // nav item data start l.
 export const navData = [
-  { title: "HOME", url: "#id" },
-  { title: "CATEGORY", url: "#id1" },
-  { title: "PRODUCT", url: "#id2" },
-  { title: "CONTACT", url: "#id3" },
+{
+    url: "category",
+    title: "Category",
+  },
+  {
+    url: "product",
+    title: "Product",
+  },
+  {
+    url: "contact",
+    title: "Contact",
+  },
 ];
 
 // nav item data end

@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       {/* main div starts here */}
-      <div className="flex md:flex-row flex-col justify-center items-center">
+      <div className="flex md:flex-row flex-col justify-center items-center mt-4">
         {/* column 1 starts here */}
         <div className="md:w-1/2 md:h-auto w-1/2 h-auto">
           <h1 className="text-Text-Primary text-6xl mb-4">NIKE AIR MAX</h1>

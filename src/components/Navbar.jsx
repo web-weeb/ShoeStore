@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       {/* nav start  */}
-      <div className="flex justify-between p-5 mx-16">
+      <div className="flex justify-between p-4 mx-16 fixed left-0 right-0 top-0 z-20">
         {/* logo start  */}
         <div className="items-center flex w-14">
           <img src={Vector} alt="" />
@@ -16,7 +16,7 @@ const Navbar = () => {
           <ul className="flex">
             {navData.map((item, index) => (
               <li className="p-4 hover:text-orange-500" key={index}>
-                <a href={item.url}>{item.title}</a>
+                <a href={`#${item.url}`}>{item.title}</a>
               </li>
             ))}
             <li className="p-4">
