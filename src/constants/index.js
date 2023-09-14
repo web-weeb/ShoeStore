@@ -18,6 +18,10 @@ export const navLinks = [
 // nav item data start l.
 export const navData = [
 {
+    url: "Home",
+    title: "Home",
+  },
+{
     url: "category",
     title: "Category",
   },
