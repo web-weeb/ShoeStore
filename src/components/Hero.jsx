@@ -3,7 +3,7 @@ import SectionWrapper from "../hoc/SectionWrapper";
 import Button from "./Button";
 import ShoeCard from "./ShoeCard";
 import { cards } from "../constants";
-import  {Shoe}  from "../assets/Images";
+import { Shoe } from "../assets/Images";
 const Hero = () => {
   return (
     <>
@@ -45,9 +45,9 @@ const Hero = () => {
         </div>
         {/* column 1 ends here */}
         {/* column 2 starts here */}
-        <div className="md:w-1/2 md:h-auto w-1/2 h-auto scale-[1.8] translate-x-24 flex justify-center items-center">
-         <img src={Shoe} alt="Shoe"
-         />
+        <div className="md:w-1/2 md:h-auto w-1/2 h-auto scale-[1.8] translate-x-24 flex justify-center items-center relative">
+          <div className="bg-primary h-[300px] w-[300px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl opacity-80 -z-10 absolute "></div>
+          <img src={Shoe} alt="Shoe" />
         </div>
         {/* column 2 ends here */}
       </div>

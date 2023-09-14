@@ -1,6 +1,7 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Prompt:wght@400;500&display=swap'); 
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Prompt:wght@400;500&display=swap');
   /*Montserrat & prompt*/
-  @import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;400;600&display=swap'); /*Mukta Vaani*/
+  @import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;400;600&display=swap');
+  /*Mukta Vaani*/
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -21,18 +22,23 @@
   }
 
   body {
-    background-color: azure;
-    /* background: url(./assets/Images/Noise-Texture3.jpg), lightgray -47.906px 0px / 106.654% 100% no-repeat;
-      mix-blend-mode: overlay; */
+    background-color: #fafafa80;
+    background-image: url("./assets/Images/Noise-Texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
   }
-  
-  h1{
+
+  h1 {
     font-family: 'Montserrat', sans-serif;
   }
 
   h2,
   h3 {
-    font-family: 'Mukta Vaani', sans-serif;}
+    font-family: 'Mukta Vaani', sans-serif;
+  }
+
   h4,
   h5,
   h6 {
