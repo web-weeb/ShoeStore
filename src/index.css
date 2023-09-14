@@ -1,4 +1,6 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Prompt:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Prompt:wght@400;500&display=swap'); 
+  /*Montserrat & prompt*/
+  @import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;400;600&display=swap'); /*Mukta Vaani*/
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -18,21 +20,21 @@
     display: none;
   }
 
-  ::selection{
-    background: none;
-  }
-
   body {
     background-color: #FAFAFA;
   }
 
-  h1,
+  h1{
+    font-family: 'Montserrat', sans-serif;
+  }
+
   h2,
-  h3,
+  h3 {
+    font-family: 'Mukta Vaani', sans-serif;}
   h4,
   h5,
   h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Prompt', sans-serif;
   }
 
   h1 {
@@ -67,6 +69,6 @@
 
   .hash-span {
     margin-top: -100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     display: block;
   }
