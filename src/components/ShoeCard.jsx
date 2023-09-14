@@ -3,11 +3,11 @@ const ShoeCard = (props) => {
   return (
     <>
       <div
-        className="relative w-44 h-32 p-5 mt-16 rounded-3xl shadow-lg"
+        className="relative w-44 h-32 p-5 mt-16 rounded-3xl shadow-hero-card bg-[#fafafa]"
         id={props.id}
       >
         {/* image start */}
-        <div className="absolute pt-1 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150">
+        <div className="absolute pt-1 h-40 w-40 bgwh -top-full -left-0 translate-y-1/4 scale-150">
           <img src={props.img} alt="shoe" />
         </div>
         {/*  image end */}

@@ -4,7 +4,7 @@ import "./App.css";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0">
+      <div className="relative z-10">
         <div className="min-h-screen">
           <Navbar />
           <Hero />
