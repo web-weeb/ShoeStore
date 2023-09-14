@@ -21,9 +21,11 @@
   }
 
   body {
-    background-color: #FAFAFA;
+    background-color: azure;
+    /* background: url(./assets/Images/Noise-Texture3.jpg), lightgray -47.906px 0px / 106.654% 100% no-repeat;
+      mix-blend-mode: overlay; */
   }
-
+  
   h1{
     font-family: 'Montserrat', sans-serif;
   }

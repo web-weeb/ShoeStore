@@ -3,7 +3,7 @@ const ShoeCard = (props) => {
   return (
     <>
       <div
-        className="relative w-44 h-32 p-5 mt-16 rounded-3xl shadow-lg"
+        className="relative w-44 h-32 p-5 mt-16 rounded-3xl shadow-hero-card"
         id={props.id}
       >
         {/* image start */}
