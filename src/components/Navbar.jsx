@@ -18,7 +18,8 @@ const Navbar = () => {
         <div className="p-2 flex">
           <ul className="hidden md:flex gap-6 items-center text-sm">
             {navData.map((item, index) => (
-              <li key={index}>
+              <li key={index}
+              onClick={()=>{setNav(item.title)}}>
                 <a href={`#${item.url}`} className={`py-1 ${nav === item.title ? "text-primary hover:text-primary" : "hover:text-primary"}`}>{item.title}</a>
               </li>
             ))}
