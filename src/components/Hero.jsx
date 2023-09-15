@@ -4,13 +4,14 @@ import Button from "./Button";
 import ShoeCard from "./ShoeCard";
 import { cards } from "../constants";
 import { Shoe } from "../assets/Images";
+import Circle from "./Circle";
 const Hero = () => {
   return (
     <>
       {/* main div starts here */}
       <div className="flex md:flex-row flex-col justify-center items-center mt-4">
-        <div className="bg-primary h-[300px] w-[300px]  -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl opacity-40  left-0 top-0 -z-10 absolute"></div>
-        <div className="bg-primary h-[261px] w-[385px]  -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl opacity-40  top-[700px] left-0 -z-10 absolute"></div>
+        <Circle position={"top-left"} />
+        <Circle position={"bottom-left"} />
         {/* column 1 starts here */}
         <div className="md:w-1/2 md:h-auto w-1/2 h-auto">
           <h1 className="text-Text-Primary text-6xl mb-4">NIKE AIR MAX</h1>
@@ -48,7 +49,9 @@ const Hero = () => {
         {/* column 1 ends here */}
         {/* column 2 starts here */}
         <div className="md:w-1/2 md:h-auto w-1/2 h-auto scale-[1.7] -top-[40px] translate-x-32 flex justify-center items-center relative">
-          <div className="bg-primary h-[300px] w-[300px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl opacity-50 -z-10 absolute "></div>
+          {/* circle */}
+          <Circle position={"under-shoe"} />
+          {/* circle end */}
           <img src={Shoe} alt="Shoe" />
         </div>
         {/* column 2 ends here */}

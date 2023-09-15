@@ -14,7 +14,7 @@ const Button = (props) => {
       className={`ms-4 ${props.fullWidth ? "w-full" : null}`}
     >
       <motion.button
-        className={`relative py-2 z-10 overflow-hidden group border-[2px] border-primary ${
+        className={`relative shadow-btn py-2 z-10 overflow-hidden group border-[2px] border-primary ${
           props.roundedFull ? "rounded-full" : "rounded-xl"
         } ${props.small ? "px-8 text-sm" : "px-10 text-lg"}
         ${props.fullWidth ? "w-full" : null}`}

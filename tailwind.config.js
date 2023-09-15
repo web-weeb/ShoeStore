@@ -13,6 +13,7 @@ export default {
       boxShadow: {
         card: "6px 9px 25px 0px rgba(0, 0, 0, 0.35)",
         "hero-card": "-2px 5px 10px 0px rgba(0, 0, 0, 0.20)",
+        btn: "3px 4px 12px 0px rgba(0,0,0,0.25)",
       },
       background: {
         "hero-pattern":
