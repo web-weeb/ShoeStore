@@ -22,12 +22,7 @@
   }
 
   body {
-    background-color: #fafafa80;
-    background-image: url("./assets/Images/Noise-Texture.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+    overflow-x: hidden;
   }
 
   h1 {
