@@ -1,19 +1,20 @@
 import { BrowserRouter } from "react-router-dom";
 import { Hero, Contact, Category, Footer, Product, Navbar } from "./components";
 import "./App.css";
+import Circle from "./components/Circle";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-10">
-        <div className="min-h-screen">
-          <Navbar />
-          <Hero />
-        </div>
-        <Category />
-        <Product />
-        <Contact />
-        <Footer />
+      <Navbar />
+      <div className="min-h-screen relative max-w-[1540px] mx-auto">
+        <Circle position={"top-left"} />
+        <Circle position={"bottom-left"} />
+        <Hero />
       </div>
+      <Category />
+      <Product />
+      <Contact />
+      <Footer />
     </BrowserRouter>
   );
 };
