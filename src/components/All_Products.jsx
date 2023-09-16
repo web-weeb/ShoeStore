@@ -11,7 +11,7 @@ const All_Products = () => {
           <React.Fragment key={index}>
             <div
               key={index}
-              className="flex flex-col w-[425px] h-[582px] border-[1px]  border-black shadow-[1px_1px_10px_0px_rgba(0, 0, 0, 0.15)]"
+              className="flex flex-col w-[425px] h-[582px]  shadow-md shadow-zinc-200"
             >
               <img
                 src={product.img}
