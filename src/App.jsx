@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Hero, Contact, Category, Footer, Product, Navbar } from "./components";
+import { Hero, Contact, Category, Footer, Product, Navbar, All_Products } from "./components";
 import "./App.css";
 import Circle from "./components/Circle";
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
       </div>
       <Category />
       <Product />
+      <All_Products />
       <Contact />
       <Footer />
     </BrowserRouter>
