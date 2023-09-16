@@ -16,7 +16,7 @@ const Product = () => {
         {/* Purbarun's Div */}
         <div className="w-[1274px] grid grid-cols-4 gap-1">
           {productMYNTG.map((item, index) => (
-            <img src={item.img} alt={item.name} key={index}/>
+            <img src={item.img} alt={item.name} key={index} className="w-full h-80" />
           ))}
         </div>
         <div className="h-[92px] flex flex-col justify-center items-center gap-6">

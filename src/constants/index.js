@@ -1,4 +1,4 @@
-import { card_img1, card_img2, card_img3, card_img4, card_img5, card_img6, card_img7, card_img8, card_img9, card_img10, card_img11,  footwear_1, footwear_2, footwear_3 } from "../assets/Images";
+import { card_img1, card_img2, card_img3, card_img4, card_img5, card_img6, card_img7, card_img8, card_img9, card_img10, card_img11,  footwear_1, footwear_2, footwear_3, Product_banner_01,Product_banner_02, Product_banner_03, Product_banner_04, Product_banner_05, Product_banner_06, Product_banner_07, Product_banner_08 } from "../assets/Images";
 
 export const navLinks = [
   {
@@ -60,35 +60,35 @@ export const cards = [
 export const productMYNTG = [
   {
     name: "1",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_01,
   },
   {
     name: "2",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_02,
   },
   {
     name: "3",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_03,
   },
   {
     name: "4",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_04,
   },
   {
     name: "5",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_05,
   },
   {
     name: "6",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_06,
   },
   {
     name: "7",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_07,
   },
   {
     name: "8",
-    img: "http://via.placeholder.com/317x324",
+    img: Product_banner_08,
   },
 ];
 export const allproducts = [

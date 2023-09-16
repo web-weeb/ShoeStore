@@ -20,6 +20,14 @@ import card_img9 from "../Images/All_Products/card_img9.png";
 import card_img10 from "../Images/All_Products/card_img10.png";
 import card_img11 from "../Images/All_Products/card_img11.png";
 import cardextra_img from "../Images/All_Products/cardextra_img.png";
+import Product_banner_01 from "../Images/Product/Product-banner_01.jpg";
+import Product_banner_02 from "../Images/Product/Product-banner_02.jpg";
+import Product_banner_03 from "../Images/Product/Product-banner_03.jpg";
+import Product_banner_04 from "../Images/Product/Product-banner_04.jpg";
+import Product_banner_05 from "../Images/Product/Product-banner_05.jpg";
+import Product_banner_06 from "../Images/Product/Product-banner_06.jpg";
+import Product_banner_07 from "../Images/Product/Product-banner_07.jpg";
+import Product_banner_08 from "../Images/Product/Product-banner_08.jpg";
 export {
   card_img1,
   card_img2,
@@ -43,4 +51,12 @@ export {
   womenscat,
   menscat,
   kidscat,
+  Product_banner_01,
+  Product_banner_02,
+  Product_banner_03,
+  Product_banner_04,
+  Product_banner_05,
+  Product_banner_06,
+  Product_banner_07,
+  Product_banner_08,
 };
