@@ -18,7 +18,7 @@ const All_Products = () => {
                 alt={`card-img${index + 1}`}
                 className="w-full h-[417px] rounded-t-[5px] flex justify-center items-center object-cover"
               />
-            <div className="flex flex-col justify-center items-start px-4 py-4 mt-2">
+              <div className="flex flex-col justify-center items-start px-4 py-4 mt-2">
                 <h3 className="font-bold text-base text-primary">
                   {product.title}
                 </h3>
