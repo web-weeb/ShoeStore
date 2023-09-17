@@ -6,13 +6,6 @@ import login from "../icons/login.svg";
 import Star from "../icons/Star.svg";
 import colorstar from "../icons/color-star.svg";
 import plus from "../icons/Plus.svg";
-export {
-  logo,
-  menu,
-  close,
-  nike,
-  login,
-  Star,
-  colorstar,
-  plus,
-};
+import filter from "../icons/filter-icon.svg";
+import sort from "../icons/sort-icon.svg";
+export { logo, menu, close, nike, login, Star, colorstar, plus, filter,sort};

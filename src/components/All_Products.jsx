@@ -2,11 +2,13 @@ import React from "react";
 import { cardextra_img } from "../assets/Images";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { allproducts } from "../constants";
+import Product_Filter from "./Product_Filter";
 
 const All_Products = () => {
   return (
     <>
-      <div className="relative z-10 justify-between p-4 mx-6 grid grid-cols-3 gap-8">
+      <Product_Filter />
+      <div className="relative  justify-between p-4 mx-6 grid grid-cols-3 gap-8">
         {allproducts.map((product, index) => (
           <React.Fragment key={index}>
             <div
