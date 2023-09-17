@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       {/* nav start  */}
-      <div className="flex relative z-10 justify-between p-4 mx-6">
+      <div className="flex fixed left-0 right-0 top-0 z-10 justify-between p-4 mx-6">
         {/* logo start  */}
         <div className="items-center flex w-14">
           <img src={Vector} alt="" />

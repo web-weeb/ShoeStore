@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <>
       {/* main div starts here */}
-      <div className="flex md:flex-row flex-col justify-center items-center mt-4">
+      <div className="max-xl:flex-wrap flex justify-center items-center mt-4">
         {/* column 1 starts here */}
-        <div className="md:w-1/2 md:h-auto w-1/2 h-auto">
+        <div className="xl:w-1/2 md:h-auto h-auto max-xl:order-2 w-full">
           <h1 className="text-Text-Primary text-6xl mb-4">NIKE AIR MAX</h1>
           <h2 className="text-primary text-4xl mt-4 mb-4">Max series</h2>
           <p className="text-Text-Secondary text-lg mt-4 mb-2">
@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
           {/* Price section ends here */}
           {/* Shoe card */}
-          <div className="flex justify-between mt-8">
+          <div className="flex gap-8 mt-8">
             {cards.map((card, i) => {
               return (
                 <ShoeCard
@@ -46,11 +46,15 @@ const Hero = () => {
         </div>
         {/* column 1 ends here */}
         {/* column 2 starts here */}
-        <div className="md:w-1/2 md:h-auto w-1/2 h-auto scale-[1.7] -top-[40px] translate-x-32 flex justify-center items-center relative">
+        <div className="xl:w-1/2 w-full flex h-screen justify-center items-center relative xl:-translate-y-20 xl:ms-20 overflow-hidden">
           {/* circle */}
           <Circle position={"under-shoe"} />
           {/* circle end */}
-          <img src={Shoe} alt="Shoe" />
+          <img
+            src={Shoe}
+            alt="Shoe"
+            className="w-full h-full max-xl:order-1 object-cover object-center -rotate-[15deg]"
+          />
         </div>
         {/* column 2 ends here */}
       </div>
