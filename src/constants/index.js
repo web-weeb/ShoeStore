@@ -1,4 +1,4 @@
-import { card_img1, card_img2, card_img3, card_img4, card_img5, card_img6, card_img7, card_img8, card_img9, card_img10, card_img11,  footwear_1, footwear_2, footwear_3, Product_banner_01,Product_banner_02, Product_banner_03, Product_banner_04, Product_banner_05, Product_banner_06, Product_banner_07, Product_banner_08 } from "../assets/Images";
+import { card_img1, card_img2, card_img3, card_img4, card_img5, card_img6, card_img7, card_img8, card_img9, card_img10, card_img11,  footwear_1, footwear_2, footwear_3, Product_banner_01,Product_banner_02, Product_banner_03, Product_banner_04, Product_banner_05, Product_banner_06, Product_banner_07, Product_banner_08, mvp1,mvp2,nike_img1,nike_img2,nike_img3} from "../assets/Images";
 
 export const navLinks = [
   {
@@ -181,3 +181,28 @@ export const allproducts = [
     img: card_img11,
   },
 ];
+
+// MVP Data start
+export const mvpData=[
+  {
+    url: mvp1
+  },
+  {
+    url: mvp2
+  }
+]
+// MVP Data end 
+// nike tech start
+export const nikeTechData=[
+{
+  url:nike_img1
+},
+{
+  url:nike_img2
+},
+{
+  url:nike_img3
+}
+]
+// nike tech end
+

@@ -4,6 +4,8 @@ import Button from "./Button";
 import { productMYNTG } from "../constants/index";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { mvpData } from "../constants/index";
+import { nikeTechData } from "../constants/index";
 const Product = () => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Trigger the animation only once
@@ -13,8 +15,35 @@ const Product = () => {
     //Main product section starts here
     <div className="flex flex-col">
       {/* MVP COLLECTION */}
-      <div>{/* Sayan's div */}</div>
-      {/* NIKE TECH */}
+      <div>{/* Sayan's div */
+        <>
+          <p>Don't miss</p>
+          <div className="grid grid-cols-2 gap-0">
+            {mvpData.map((item, index) => (
+              <img className="w-[100%] h-[100%]" src={item.url} alt="" />
+            ))}
+
+          </div>
+            <h1 title="hello" className="text-center mt-10">MVP COLLECTION</h1>
+          <p className="text-primary text-center">Elevate your look with our MVP collection - a striking blend of bold colors and classic styles</p>
+          <div className="flex justify-center my-10"><Button name={"More"} roundedFull /></div>
+        </>
+        
+      }</div>
+      {/* NIKE TECH */
+        <>
+        <p>Featured</p>
+          <div className="grid grid-cols-3 gap-0">
+            {nikeTechData.map((item, index) => (
+              <img key={index} className="w-[80%] h-[100%]" src={item.url} alt="" />
+            ))}
+
+          </div>
+          <h1 className="text-center mt-10">NIKE TECH</h1>
+          <p className="text-primary text-center">Elevate your look with our MVP collection - a striking blend of bold colors and classic styles</p>
+          <div className="flex justify-center my-10"><Button name={"More"} roundedFull /></div>
+        </>
+      }
       <div>{/* Subhojits's div */}</div>
       {/* MEET YOUR NEW TRAIL GUIDES*/}
       <div className="flex flex-col justify-center items-center gap-14 min-h-screen">

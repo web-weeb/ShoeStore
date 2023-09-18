@@ -28,6 +28,11 @@ import Product_banner_05 from "../Images/Product/Product-banner_05.jpg";
 import Product_banner_06 from "../Images/Product/Product-banner_06.jpg";
 import Product_banner_07 from "../Images/Product/Product-banner_07.jpg";
 import Product_banner_08 from "../Images/Product/Product-banner_08.jpg";
+import mvp1 from "../Images/Product/mvp1.png";
+import mvp2 from "../Images/Product/mvp2.png";
+import nike_img1 from "../Images/niketech1.png";
+import nike_img2 from "../Images/niketech2.png";
+import nike_img3 from "../Images/niketech3.png";
 export {
   card_img1,
   card_img2,
@@ -59,4 +64,9 @@ export {
   Product_banner_06,
   Product_banner_07,
   Product_banner_08,
+  mvp1,
+  mvp2,
+  nike_img1,
+  nike_img2,
+  nike_img3
 };
