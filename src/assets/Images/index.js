@@ -28,6 +28,9 @@ import Product_banner_05 from "../Images/Product/Product-banner_05.jpg";
 import Product_banner_06 from "../Images/Product/Product-banner_06.jpg";
 import Product_banner_07 from "../Images/Product/Product-banner_07.jpg";
 import Product_banner_08 from "../Images/Product/Product-banner_08.jpg";
+import collection_1 from "../Images/Product/collection_1.png";
+import collection_2 from "../Images/Product/collection_2.png";
+import collection_3 from "../Images/Product/collection_3.png";
 export {
   card_img1,
   card_img2,
@@ -59,4 +62,7 @@ export {
   Product_banner_06,
   Product_banner_07,
   Product_banner_08,
+  collection_1,
+  collection_2,
+  collection_3,
 };

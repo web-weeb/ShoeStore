@@ -1,9 +1,23 @@
 import React from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import Button from "./Button";
-import { productMYNTG } from "../constants/index";
+import { productMYNTG, cardsCollection } from "../constants/index";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+const CardsCollection = (props) =>{
+  return (
+    <>
+      <div className="h-[400px] w-[400px]">
+        <img
+          src={props.src}
+          className="w-full h-full object-cover rounded-[5px]"
+        />
+      </div>
+    </>
+  );
+}
+
 const Product = () => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Trigger the animation only once
@@ -17,9 +31,9 @@ const Product = () => {
       {/* NIKE TECH */}
       <div>{/* Subhojits's div */}</div>
       {/* MEET YOUR NEW TRAIL GUIDES*/}
-      <div className="flex flex-col justify-center items-center gap-14 min-h-screen">
-        {/* Purbarun's Div */}
-        <div className="w-[1274px] grid grid-cols-4 gap-1">
+      <div className="flex flex-col justify-center items-center gap-14 min-h-screen w-[1274px] mx-auto ">
+        <p className="mr-auto">The Latest</p>
+        <div className="grid grid-cols-4 gap-1">
           {productMYNTG.map((item, index) => (
             <motion.img
               src={item.img}
@@ -43,7 +57,20 @@ const Product = () => {
           <Button name="MORE" roundedFull small />
         </div>
       </div>
-      <div>{/*Purbarun's Div*/}</div>
+      <div className="flex flex-col justify-center items-center first:items-start gap-14 min-h-screen w-[1274px] mx-auto">
+        <div className="grid grid-cols-3 gap-10">
+          {cardsCollection.map((item, index) => (
+            <CardsCollection src={item.img} key={index} />
+          ))}
+        </div>
+        <div className="h-[92px] flex flex-col justify-center items-center gap-6">
+          <h1 className="text-5xl font-bold">ESSENTIAL COLLECTIONS</h1>
+          <h5 className="text-primary">Essential itmes for your daily life.</h5>
+        </div>
+        <div>
+          <Button name="MORE" roundedFull small />
+        </div>
+      </div>
     </div>
     //Main product section ends here
   );
