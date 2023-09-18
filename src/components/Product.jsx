@@ -34,7 +34,7 @@ const Product = () => {
           <p>Don't miss</p>
           <div className="grid grid-cols-2 gap-0">
             {mvpData.map((item, index) => (
-              <img className="w-[100%] h-[100%]" src={item.url} alt="" />
+              <img key={index} className="w-[100%] h-[100%]" src={item.url} alt="" />
             ))}
 
           </div>
