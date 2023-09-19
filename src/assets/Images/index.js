@@ -36,6 +36,12 @@ import nike_img3 from "../Images/niketech3.png";
 import collection_1 from "../Images/Product/collection_1.png";
 import collection_2 from "../Images/Product/collection_2.png";
 import collection_3 from "../Images/Product/collection_3.png";
+import product_d1 from "../Images/Product_details/product_d1.png";
+import product_d2 from "../Images/Product_details/product_d2.png";
+import product_d3 from "../Images/Product_details/product_d3.png";
+import product_d4 from "../Images/Product_details/product_d4.png";
+import product_d5 from "../Images/Product_details/product_d5.png";
+import product_d6 from "../Images/Product_details/product_d6.png";
 export {
   card_img1,
   card_img2,
@@ -75,4 +81,10 @@ export {
   collection_1,
   collection_2,
   collection_3,
+  product_d1,
+  product_d2,
+  product_d3,
+  product_d4,
+  product_d5,
+  product_d6,
 };

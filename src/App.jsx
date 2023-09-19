@@ -7,6 +7,7 @@ import {
   Product,
   Navbar,
   All_Products,
+  Product_Details,
 } from "./components";
 import "./App.css";
 import Circle from "./components/Circle";
@@ -22,6 +23,7 @@ const App = () => {
       <Category />
       <Product />
       <All_Products />
+      <Product_Details/>
       <Contact />
       <Footer />
     </BrowserRouter>
