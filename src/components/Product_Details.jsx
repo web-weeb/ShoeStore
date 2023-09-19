@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { productDetailsimg } from "../constants";
+import RightProductDetails from "./RightProductDetails";
 
 const Product_Details = () => {
   const [mainImage, setMainImage] = useState(
@@ -46,7 +47,7 @@ const handleImageClick = (image) => {
         <div className="flex flex-col justify-center items-center">
           <div className="overflow-y-auto max-h-[615px]">
             <div className="flex flex-col gap-2">
-              {/*ekhane kaj korbi purbarun*/}
+              <RightProductDetails />
             </div>
           </div>
         </div>
