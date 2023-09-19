@@ -7,10 +7,10 @@ import { useInView } from "react-intersection-observer";
 import { mvpData } from "../constants/index";
 import { nikeTechData } from "../constants/index";
 
-const CardsCollection = (props) =>{
+const CardsCollection = (props) => {
   return (
     <>
-      <div className="h-[400px] w-[400px]">
+      <div className="">
         <img
           src={props.src}
           className="w-full h-full object-cover rounded-[5px]"
@@ -18,7 +18,7 @@ const CardsCollection = (props) =>{
       </div>
     </>
   );
-}
+};
 
 const Product = () => {
   const [ref, inView] = useInView({
@@ -27,37 +27,54 @@ const Product = () => {
   });
   return (
     //Main product section starts here
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-10">
       {/* MVP COLLECTION */}
-      <div>{/* Sayan's div */
-        <>
-          <p>Don't miss</p>
-          <div className="grid grid-cols-2 gap-0">
-            {mvpData.map((item, index) => (
-              <img key={index} className="w-[100%] h-[100%]" src={item.url} alt="" />
-            ))}
-
-          </div>
-            <h1 title="hello" className="text-center mt-10">MVP COLLECTION</h1>
-          <p className="text-primary text-center">Elevate your look with our MVP collection - a striking blend of bold colors and classic styles</p>
-          <div className="flex justify-center my-10"><Button name={"More"} roundedFull /></div>
-        </>
-        
-      }</div>
-      {/* NIKE TECH */
-        <>
+      <div>
+        {/* Sayan's div */}
+        <p>Don't miss</p>
+        <div className="grid grid-cols-2 gap-0">
+          {mvpData.map((item, index) => (
+            <img
+              key={index}
+              className="w-[100%] h-[100%]"
+              src={item.url}
+              alt=""
+            />
+          ))}
+        </div>
+        <h1 title="hello" className="text-center mt-10">
+          MVP COLLECTION
+        </h1>
+        <p className="text-primary text-center">
+          Elevate your look with our MVP collection - a striking blend of bold
+          colors and classic styles
+        </p>
+        <div className="flex justify-center my-10">
+          <Button name={"More"} roundedFull />
+        </div>
+      </div>
+      {/* NIKE TECH */}
+      <div>
         <p>Featured</p>
-          <div className="grid grid-cols-3 gap-0">
-            {nikeTechData.map((item, index) => (
-              <img key={index} className="w-[80%] h-[100%]" src={item.url} alt="" />
-            ))}
-
-          </div>
-          <h1 className="text-center mt-10">NIKE TECH</h1>
-          <p className="text-primary text-center">Elevate your look with our MVP collection - a striking blend of bold colors and classic styles</p>
-          <div className="flex justify-center my-10"><Button name={"More"} roundedFull /></div>
-        </>
-      }
+        <div className="grid grid-cols-3 gap-0">
+          {nikeTechData.map((item, index) => (
+            <img
+              key={index}
+              className="w-[80%] h-[100%]"
+              src={item.url}
+              alt=""
+            />
+          ))}
+        </div>
+        <h1 className="text-center mt-10">NIKE TECH</h1>
+        <p className="text-primary text-center">
+          Elevate your look with our MVP collection - a striking blend of bold
+          colors and classic styles
+        </p>
+        <div className="flex justify-center my-10">
+          <Button name={"More"} roundedFull />
+        </div>
+      </div>
       <div>{/* Subhojits's div */}</div>
       {/* MEET YOUR NEW TRAIL GUIDES*/}
       <div className="flex flex-col justify-center items-center gap-14 min-h-screen w-[1274px] mx-auto ">
@@ -86,10 +103,11 @@ const Product = () => {
           <Button name="MORE" roundedFull small />
         </div>
       </div>
+      {/* CARDS COLLECTION */}
       <div className="flex flex-col justify-center items-center first:items-start gap-14 min-h-screen w-[1274px] mx-auto">
         <div className="grid grid-cols-3 gap-10">
-          {cardsCollection.map((item, index) => (
-            <CardsCollection src={item.img} key={index} />
+          {nikeTechData.map((item, index) => (
+            <CardsCollection src={item.url} key={index} />
           ))}
         </div>
         <div className="h-[92px] flex flex-col justify-center items-center gap-6">
