@@ -33,9 +33,6 @@ import mvp2 from "../Images/mvp2.png";
 import nike_img1 from "../Images/niketech1.png";
 import nike_img2 from "../Images/niketech2.png";
 import nike_img3 from "../Images/niketech3.png";
-import collection_1 from "../Images/Product/collection_1.png";
-import collection_2 from "../Images/Product/collection_2.png";
-import collection_3 from "../Images/Product/collection_3.png";
 import product_d1 from "../Images/Product_details/product_d1.png";
 import product_d2 from "../Images/Product_details/product_d2.png";
 import product_d3 from "../Images/Product_details/product_d3.png";
@@ -78,9 +75,6 @@ export {
   nike_img1,
   nike_img2,
   nike_img3,
-  collection_1,
-  collection_2,
-  collection_3,
   product_d1,
   product_d2,
   product_d3,
