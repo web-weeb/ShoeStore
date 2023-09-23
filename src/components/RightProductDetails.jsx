@@ -7,13 +7,19 @@ import sort from "../assets/icons/sort-icon.svg";
 import { bagIcon, loveIcon } from "../assets/icons/index";
 
 const RightProductDetails = () => {
+  const formatCurrency = (num) => {
+    return Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(num);
+  };
   return (
     <>
       <div className="flex flex-col gap-2 w-full h-auto">
         {/* Description */}
         <h4 className="text-[32px]">Jordan Max Aura 5</h4>
         <h5 className="text-[28px]">Men’s Shoes</h5>
-        <h5 className="text-[28px]">MRP : ₹ 10 595.00</h5>
+        <h5 className="text-[28px]">MRP : {formatCurrency(13450)}</h5>
         <div className="text-[#A0A0A0] font-[Mukta-Vaani] text-[16px] font-[400]">
           inc. of all taxes <br /> (Also includes all applicable duties)
         </div>
