@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { productDetailsimg } from "../constants";
 import RightProductDetails from "./RightProductDetails";
@@ -8,10 +8,9 @@ const Product_Details = () => {
     productDetailsimg[0]?.img[0] || "http://via.placeholder.com/535x615"
   ); // default image
 
-
-const handleImageClick = (image) => {
+  const handleImageClick = (image) => {
     setMainImage(image);
-    }; 
+  };
   return (
     <>
       <div className="grid grid-cols-2 justify-center items-center relative p-4 mx-6">
@@ -58,4 +57,3 @@ const handleImageClick = (image) => {
 };
 
 export default SectionWrapper(Product_Details, "");
-
