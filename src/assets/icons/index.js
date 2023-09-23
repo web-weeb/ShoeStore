@@ -8,4 +8,6 @@ import colorstar from "../icons/color-star.svg";
 import plus from "../icons/Plus.svg";
 import filter from "../icons/filter-icon.svg";
 import sort from "../icons/sort-icon.svg";
-export { logo, menu, close, nike, login, Star, colorstar, plus, filter,sort};
+import bagIcon from "../icons/button-bag-icon.svg";
+import loveIcon from "../icons/button-vector.svg";
+export { logo, menu, close, nike, login, Star, colorstar, plus, filter,sort,bagIcon,loveIcon};

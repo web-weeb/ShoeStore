@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { productDetailsimg } from "../constants";
 import RightProductDetails from "./RightProductDetails";
@@ -8,13 +8,12 @@ const Product_Details = () => {
     productDetailsimg[0]?.img[0] || "http://via.placeholder.com/535x615"
   ); // default image
 
-
-const handleImageClick = (image) => {
+  const handleImageClick = (image) => {
     setMainImage(image);
-    }; 
+  };
   return (
     <>
-      <div className="grid grid-cols-2 justify-center items-center relative p-4 mx-6">
+      <div className="grid grid-cols-2 justify-center relative p-4 mx-6">
         {/* left side start */}
         <div className="flex flex-row gap-4">
           <div className="overflow-y-auto max-h-[615px]">
@@ -38,17 +37,15 @@ const handleImageClick = (image) => {
             <img
               src={mainImage}
               alt=""
-              className="w-[535px] h-[615px] rounded-[5px] flex justify-center items-center object-cover"
+              className="w-[535px] h-[615px] rounded-[5px] object-cover"
             />
           </div>
         </div>
         {/* left side end */}
         {/* right side start */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex justify-center pl-28 items-center">
           <div className="overflow-y-auto max-h-[615px]">
-            <div className="flex flex-col gap-2">
-              <RightProductDetails />
-            </div>
+            <RightProductDetails />
           </div>
         </div>
         {/* right side end */}
@@ -58,4 +55,3 @@ const handleImageClick = (image) => {
 };
 
 export default SectionWrapper(Product_Details, "");
-

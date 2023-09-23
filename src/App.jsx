@@ -25,7 +25,7 @@ const App = () => {
       <All_Products />
       <Product_Details/>
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };

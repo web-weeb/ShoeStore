@@ -11,7 +11,7 @@ const Button = (props) => {
   return (
     <Link
       to={props.link && props.link}
-      className={`ms-4 ${props.fullWidth ? "w-full" : null}`}
+      className={`${props.fullWidth ? "w-full" : null}`}
     >
       <motion.button
         className={`relative shadow-btn py-2 z-10 overflow-hidden group border-[2px] border-primary ${
