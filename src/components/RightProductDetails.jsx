@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { productDetailsimg, sbtn, review } from "../constants";
@@ -7,6 +7,21 @@ import sort from "../assets/icons/sort-icon.svg";
 import { bagIcon, loveIcon } from "../assets/icons/index";
 
 const RightProductDetails = () => {
+  const [deli, setDeli] = useState(false);
+  const delivery = () => {
+    setDeli(!deli);
+  };
+
+  const [rev, setRev] = useState(false);
+  const Rev = () => {
+    setRev(!rev);
+  };
+
+  const [info, setInfo] = useState(false);
+  const Info = () => {
+    setInfo(!info);
+  };
+
   return (
     <>
       <div className="flex flex-col gap-2 w-full h-auto">
@@ -67,12 +82,11 @@ const RightProductDetails = () => {
             atop a heel of Nike Air cushioning so you can walk, run or skate all
             day and still have fresh feeling soles.
           </h3>
-          {/* disk not working */}
-          <ol className="mt-10 list-disk">
+          <ul className="mt-10 list-inside list-disc">
             <li>Color Shown: Cement Grey/ Topaz</li>
             <li>Gold/White/Anthracite</li>
             <li>Style: DZ4353-007</li>
-          </ol>
+          </ul>
           <div className="underline mt-10 w-2/6">View Product Details</div>
           {/* break line */}
           <div className="border border-[#A0A0A0] my-8"></div>
@@ -80,11 +94,13 @@ const RightProductDetails = () => {
           <div className="flex flex-col">
             <div className="flex justify-between my-auto">
               <h4>Delivery & Returns</h4>
-              <button href="">
+              <button href="" onClick={delivery}>
                 <img src={sort} alt="" />
               </button>
             </div>
-            <div className="my-8 text-[Mukta-Vaani]">
+            <div
+              className={`my-8 text-[Mukta-Vaani] ${deli ? "flex" : "hidden"}`}
+            >
               <p>
                 All purchases are subject to delivery fees. <br />• Standard
                 delivery 4-9 business days Orders are processed and delivered
@@ -104,6 +120,7 @@ const RightProductDetails = () => {
                 Reviews(10)
               </div>
               <div className="flex items-center gap-1">
+                {/* connect proper data here */}
                 {[1, 2, 3, 4].map((i) => {
                   return (
                     <>
@@ -132,7 +149,7 @@ const RightProductDetails = () => {
                     <AiOutlineStar />
                   </div>
                 </IconContext.Provider>
-                <button href="">
+                <button href="" onClick={Rev}>
                   <img src={sort} alt="" />
                 </button>
               </div>
@@ -176,15 +193,32 @@ const RightProductDetails = () => {
             <div className="underline mt-1 w-2/6">Write a review</div>
           </div>
           {/* review details */}
-          <div className="flex flex-col gap-2 mt-4">
-            <div className="text-[Mukta-Vaani] text-xl">
-              Get better over time
-            </div>
-            <div className="flex gap-6">
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4].map((i) => {
-                  return (
-                    <>
+          <div className={`${rev?"flex flex-col":"hidden"}`}>
+            {review.map((items, index) => (
+              <>
+                <div className="flex flex-col gap-2 mt-4" key={index}>
+                  <div className="text-[Mukta-Vaani] text-xl">
+                    {items.topic}
+                  </div>
+                  <div className="flex gap-6">
+                    <div className="flex items-center gap-1">
+                      {[1, 2, 3, 4].map((i) => {
+                        return (
+                          <>
+                            <IconContext.Provider
+                              value={{
+                                color: "#F37937",
+                                className: "global-class-name",
+                                size: "20px",
+                              }}
+                            >
+                              <div>
+                                <AiFillStar key={i} />
+                              </div>
+                            </IconContext.Provider>
+                          </>
+                        );
+                      })}
                       <IconContext.Provider
                         value={{
                           color: "#F37937",
@@ -193,45 +227,33 @@ const RightProductDetails = () => {
                         }}
                       >
                         <div>
-                          <AiFillStar key={i} />
+                          <AiOutlineStar />
                         </div>
                       </IconContext.Provider>
-                    </>
-                  );
-                })}
-                <IconContext.Provider
-                  value={{
-                    color: "#F37937",
-                    className: "global-class-name",
-                    size: "20px",
-                  }}
-                >
-                  <div>
-                    <AiOutlineStar />
+                    </div>
+                    <div className="text-[Mukta-Vaani] text-[#A0A0A0] text-xl">
+                      {items.name} - {items.date}
+                    </div>
                   </div>
-                </IconContext.Provider>
-              </div>
-              <div className="text-[Mukta-Vaani] text-[#A0A0A0] text-xl">
-                Maddy Jones - 23 Aug 2022
-              </div>
-            </div>
-            <div className="text-[Mukta-Vaani] text-xl font-[400]">
-              These sneakers are a little tight at first but after a few wears
-              you can feel them starting to loosen up a b it. I'd say they run
-              true to size but maybe go ...
-            </div>
-            <div className="underline mt-1 w-2/6">More</div>
+                  <div className="text-[Mukta-Vaani] text-xl font-[400]">
+                    {items.review}
+                  </div>
+                  <div className="underline mt-1 w-2/6">More</div>
+                  <div className="border border-[#A0A0A0] mt-8 mb-5"></div>
+                </div>
+              </>
+            ))}
           </div>
-          <div className="border border-[#A0A0A0] mt-8 mb-5"></div>
           <div className="border border-[#A0A0A0] my-8 mb-5"></div>
+          {/* Product Information */}
           <div className="flex flex-col">
             <div className="flex justify-between my-auto">
               <h4>Product Information</h4>
-              <button href="">
+              <button href="" onClick={Info}>
                 <img src={sort} alt="" />
               </button>
             </div>
-            <div className="my-8 text-[Mukta-Vaani]">
+            <div className={`my-8 text-[Mukta-Vaani] ${info?"flex flex-col":"hidden"}`}>
               <p>
                 <span className="text-[12px]">
                   Declaration of Importer: Direct import by the individual
