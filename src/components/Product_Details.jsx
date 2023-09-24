@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { productDetailsimg } from "../constants";
 import RightProductDetails from "./RightProductDetails";
+import Additional_shoe from "./Additional_shoe";
 
 const Product_Details = () => {
   const [mainImage, setMainImage] = useState(
@@ -50,6 +51,11 @@ const Product_Details = () => {
         </div>
         {/* right side end */}
       </div>
+      {/* ADDITIONAL SHOE START*/}
+      <div>
+        <Additional_shoe />
+      </div>
+      {/* aDDITIONAL SHOE END */}
     </>
   );
 };

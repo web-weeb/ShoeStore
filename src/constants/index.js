@@ -336,3 +336,24 @@ export const review = [
     rate:3
   },
 ];
+
+export const xtrashoe = [
+  {
+    img: card_img11,
+    entity: "Jordan 2",
+    type: "Men's Shoes",
+    price: "17.00",
+  },
+  {
+    img: card_img11,
+    entity: "Jordan 3",
+    type: "Men's Shoes",
+    price: "17.00",
+  },
+  {
+    img: card_img11,
+    entity: "Jordan 4",
+    type: "Men's Shoes",
+    price: "17.00",
+  },
+];
