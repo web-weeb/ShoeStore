@@ -1,4 +1,5 @@
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { RiAddCircleFill } from "react-icons/ri";
 const ShoeCard = (props) => {
   return (
     <>
@@ -27,6 +28,9 @@ const ShoeCard = (props) => {
           </div>
           <div className="price">$180</div>
         </div>
+        <a href="#" className="absolute -right-3 -bottom-4 rounded-full">
+          <RiAddCircleFill size={44} />
+        </a>
         {/* foot wear details end*/}
       </div>
     </>
