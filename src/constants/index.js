@@ -32,6 +32,11 @@ import {
   product_d4,
   product_d5,
   product_d6,
+  xtra_p1,
+  xtra_p2,
+  xtra_p3,
+  // xtra_p2,
+  // xtra_p3,
 } from "../assets/Images";
 export const navLinks = [
   {
@@ -349,19 +354,19 @@ export const review = [
 
 export const xtrashoe = [
   {
-    img: card_img11,
+    img: xtra_p1,
     entity: "Jordan 2",
     type: "Men's Shoes",
     price: "17.00",
   },
   {
-    img: card_img11,
+    img: xtra_p2,
     entity: "Jordan 3",
     type: "Men's Shoes",
     price: "17.00",
   },
   {
-    img: card_img11,
+    img: xtra_p3,
     entity: "Jordan 4",
     type: "Men's Shoes",
     price: "17.00",

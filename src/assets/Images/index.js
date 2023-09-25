@@ -39,6 +39,10 @@ import product_d3 from "../Images/Product_details/product_d3.png";
 import product_d4 from "../Images/Product_details/product_d4.png";
 import product_d5 from "../Images/Product_details/product_d5.png";
 import product_d6 from "../Images/Product_details/product_d6.png";
+import xtra_p1 from "../Images/Product_details/xtra_p1.png";
+import xtra_p2 from "../Images/Product_details/xtra_p2.png";
+import xtra_p3 from "../Images/Product_details/xtra_p3.png";
+
 export {
   card_img1,
   card_img2,
@@ -81,4 +85,7 @@ export {
   product_d4,
   product_d5,
   product_d6,
+  xtra_p1,
+  xtra_p2,
+  xtra_p3,
 };

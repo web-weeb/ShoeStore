@@ -18,7 +18,7 @@ const Additional_shoe = () => {
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 w-full">
             {xtrashoe.map((item, index) => {
               return (
-                <div className=" p-2" key={item}>
+                <div className=" p-2" key={index}>
                   <div className="h-full w-full bg-white">
                     <img
                       className="object-center object-cover w-full"
