@@ -9,7 +9,13 @@ const ShoeCard = (props) => {
       >
         {/* image start */}
         <div className="absolute pt-1 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150">
-          <img src={props.img} alt="shoe" />
+          <img
+            src={props.img}
+            alt="shoe"
+            onClick={() => {
+              props.setShowCard(props.img);
+            }}
+          />
         </div>
         {/*  image end */}
         {/* foot wear details start*/}

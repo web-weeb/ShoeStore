@@ -5,7 +5,12 @@ import ShoeCard from "./ShoeCard";
 import { cards } from "../constants";
 import { Shoe } from "../assets/Images";
 import Circle from "./Circle";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 const Hero = () => {
+  const [showCard, setShowCard] = useState("");
+  console.log(showCard);
   return (
     <>
       {/* main div starts here */}
@@ -38,6 +43,7 @@ const Hero = () => {
                   img={card.img}
                   id={i}
                   key={i}
+                  setShowCard={setShowCard}
                 />
               );
             })}
@@ -50,11 +56,57 @@ const Hero = () => {
           {/* circle */}
           <Circle position={"under-shoe"} />
           {/* circle end */}
-          <img
-            src={Shoe}
-            alt="Shoe"
-            className="w-full h-full max-xl:order-1 object-cover object-center -rotate-[15deg]"
-          />
+          {/* animation */}
+          {showCard === "" && (
+            <motion.img
+              src={Shoe}
+              alt="Shoe"
+              className="w-full h-full max-xl:order-1 object-cover object-center "
+              initial={{ opacity: 0, x: -100, rotate: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -100 }}
+            />
+          )}
+          {showCard === "/src/assets/Images/footwear_1.png" && (
+            <motion.img
+              src={Shoe}
+              alt="Shoe"
+              className="w-full h-full max-xl:order-1 object-cover object-center "
+              initial={{ opacity: 0, x: -100, rotate: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -100 }}
+            />
+          )}
+          {showCard === "/src/assets/Images/footwear_2.png" && (
+            <motion.img
+              src={showCard}
+              alt="Shoe"
+              className="w-full h-full max-xl:order-1 object-cover object-center "
+              initial={{ opacity: 0, x: -100, rotate: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -100 }}
+            />
+          )}
+          {showCard === "/src/assets/Images/footwear_3.png" && (
+            <motion.img
+              src={showCard}
+              alt="Shoe"
+              className="w-full h-full max-xl:order-1 object-cover object-center "
+              initial={{ opacity: 0, x: -100, rotate: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -100 }}
+            />
+          )}
+          {/* animation end */}
+          <div className="absolute text-[200px] text-right z-[-3] right-0 top-8 text-primary/25">
+            <div className="tracking-[20px]">JUST</div>
+            <div className="tracking-[20px]">DO</div>
+            <div className="tracking-[20px]">IT</div>
+          </div>
         </div>
         {/* column 2 ends here */}
       </div>
