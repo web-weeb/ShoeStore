@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
         {/* column 1 ends here */}
         {/* column 2 starts here */}
-        <div className="xl:w-1/2 w-full flex h-screen justify-center items-center relative xl:-translate-y-20 xl:ms-20 overflow-hidden">
+        <div className="xl:w-1/2 w-full flex h-screen justify-center items-center relative xl:-translate-y-20 xl:ms-20">
           {/* circle */}
           <Circle position={"under-shoe"} />
           {/* circle end */}
@@ -61,7 +61,7 @@ const Hero = () => {
             <motion.img
               src={Shoe}
               alt="Shoe"
-              className="w-full h-full max-xl:order-1 object-cover object-center "
+              className="w-full h-full max-xl:order-1 object-cover object-center"
               initial={{ opacity: 0, x: -100, rotate: -15 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -102,10 +102,10 @@ const Hero = () => {
             />
           )}
           {/* animation end */}
-          <div className="absolute text-right z-[-3] right-0 top-8 text-primary/25 flex flex-col justify-end">
-            <div className="tracking-[20px] montserrat text-[200px] mt-10">JUST</div>
-            <div className="tracking-[20px] montserrat text-[200px] ">DO</div>
-            <div className="tracking-[20px] montserrat text-[200px] -mt-10">IT</div>
+          <div className="absolute text-right z-[-3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary/25 flex flex-col justify-end">
+            <div className="tracking-[20px] montserrat text-[12rem] mt-10">JUST</div>
+            <div className="tracking-[20px] montserrat text-[12rem] ">DO</div>
+            <div className="tracking-[20px] montserrat text-[12rem] -mt-10">IT</div>
           </div>
         </div>
         {/* column 2 ends here */}
