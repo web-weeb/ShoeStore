@@ -102,10 +102,10 @@ const Hero = () => {
             />
           )}
           {/* animation end */}
-          <div className="absolute text-[200px] text-right z-[-3] right-0 top-8 text-primary/25">
-            <div className="tracking-[20px]">JUST</div>
-            <div className="tracking-[20px]">DO</div>
-            <div className="tracking-[20px]">IT</div>
+          <div className="absolute text-right z-[-3] right-0 top-8 text-primary/25 flex flex-col justify-end">
+            <div className="tracking-[20px] montserrat text-[200px] mt-10">JUST</div>
+            <div className="tracking-[20px] montserrat text-[200px] ">DO</div>
+            <div className="tracking-[20px] montserrat text-[200px] -mt-10">IT</div>
           </div>
         </div>
         {/* column 2 ends here */}

@@ -15,6 +15,7 @@ const ShoeCard = (props) => {
             onClick={() => {
               props.setShowCard(props.img);
             }}
+            className="cursor-pointer w-full h-full object-cover object-center"
           />
         </div>
         {/*  image end */}
