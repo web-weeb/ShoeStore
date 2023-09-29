@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { productDetailsimg, sbtn, review } from "../constants";
 import Button from "./Button";
 import sort from "../assets/icons/sort-icon.svg";
-import { bagIcon, loveIcon } from "../assets/icons/index";
+import { RiHeart2Fill, RiShoppingBag3Fill } from "react-icons/ri";
 
 const RightProductDetails = () => {
   const [deli, setDeli] = useState(false);
@@ -65,19 +65,25 @@ const RightProductDetails = () => {
           {/* size buttons */}
           <div className="grid grid-cols-7 gap-1 mt-2">
             {sbtn.map((item, index) => (
-              <div
-                className="w-18 h-10 flex justify-center items-center border-2 border-[#F37937] text-[#F37937] cursor-pointer"
-                key={index}
-              >
-                {item.size}
-              </div>
+              <Button key={index} name={item.size} transparent fullWidth noRounded offShadow />
             ))}
           </div>
         </div>
         {/* Two Buttons */}
         <div className="grid grid-row-2 gap-4 mt-8">
-          <Button roundedFull name="Add to bag" fullWidth />
-          <Button roundedFull name="Favourites" fullWidth transparent />
+          <Button
+            roundedFull
+            name="Add to bag"
+            fullWidth
+            icon={<RiShoppingBag3Fill />}
+          />
+          <Button
+            roundedFull
+            name="Favourites"
+            fullWidth
+            transparent
+            icon={<RiHeart2Fill />}
+          />
         </div>
         {/* Details*/}
         <div className="mt-14">
@@ -199,7 +205,7 @@ const RightProductDetails = () => {
             <div className="underline mt-1 w-2/6">Write a review</div>
           </div>
           {/* review details */}
-          <div className={`${rev?"flex flex-col":"hidden"}`}>
+          <div className={`${rev ? "flex flex-col" : "hidden"}`}>
             {review.map((items, index) => (
               <>
                 <div className="flex flex-col gap-2 mt-4" key={index}>
@@ -259,7 +265,11 @@ const RightProductDetails = () => {
                 <img src={sort} alt="" />
               </button>
             </div>
-            <div className={`my-8 text-[Mukta-Vaani] ${info?"flex flex-col":"hidden"}`}>
+            <div
+              className={`my-8 text-[Mukta-Vaani] ${
+                info ? "flex flex-col" : "hidden"
+              }`}
+            >
               <p>
                 <span className="text-[12px]">
                   Declaration of Importer: Direct import by the individual

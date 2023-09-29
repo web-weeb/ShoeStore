@@ -1,5 +1,7 @@
+//TODO: create a card component for the shoe
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { RiAddCircleFill } from "react-icons/ri";
+
 const ShoeCard = (props) => {
   return (
     <>

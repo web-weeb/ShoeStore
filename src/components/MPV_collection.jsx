@@ -1,4 +1,3 @@
-import React from "react";
 import { mvpData } from "../constants/index";
 import Button from "./Button";
 

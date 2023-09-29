@@ -1,18 +1,18 @@
-import "../App.css";
-import SectionWrapper from "../hoc/SectionWrapper";
-import Button from "./Button";
-import ShoeCard from "./ShoeCard";
+import { Circle, ShoeCard,Button } from "../components";
 import { cards } from "../constants";
-import { Shoe } from "../assets/Images";
-import Circle from "./Circle";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Shoe } from "../assets/Images";
 
-const Hero = () => {
+
+const Home = () => {
   const [showCard, setShowCard] = useState("");
   console.log(showCard);
   return (
     <>
+     <section className="min-h-screen justify-center flex items-center relative max-w-[1540px] mx-auto" id="Home">
+          <Circle position={"top-left"} />
+          <Circle position={"bottom-left"} />
       {/* main div starts here */}
       <div className="max-xl:flex-wrap flex justify-center items-center mt-4">
         {/* column 1 starts here */}
@@ -111,8 +111,9 @@ const Hero = () => {
         {/* column 2 ends here */}
       </div>
       {/* main div ends here */}
+      </section>
     </>
   );
 };
 
-export default SectionWrapper(Hero, "");
+export default Home;

@@ -56,7 +56,7 @@ export const navLinks = [
 // nav item data start l.
 export const navData = [
   {
-    url: "Home",
+    url: "",
     title: "Home",
   },
   {
@@ -64,8 +64,12 @@ export const navData = [
     title: "Category",
   },
   {
-    url: "product",
-    title: "Product",
+    url: "offers",
+    title: "Offers",
+  },
+  {
+    url: "products",
+    title: "Products",
   },
   {
     url: "contact",
@@ -263,7 +267,7 @@ export const nikeTechData = [
 // size chart btns
 const sbtn = [];
 let s = 1.5;
-for(let i=1;i<22;i++){
+for (let i = 1; i < 22; i++) {
   if (i < 12) {
     sbtn[i] = { size: s };
     s += 0.5;
@@ -273,7 +277,7 @@ for(let i=1;i<22;i++){
   }
 }
 
-export {sbtn};
+export { sbtn };
 
 // size chart btns end
 
@@ -281,74 +285,84 @@ export {sbtn};
 
 export const review = [
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:4,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 4,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:5,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 5,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:4,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 4,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:1,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 1,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:4,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 4,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:3,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 3,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:2,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 2,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:4,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 4,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:5,
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 5,
   },
   {
-    name:"John Doe",
-    date:"24th September 2023",
-    topic: "Lorem ipsum dolor " ,
-    review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
-    rate:3
+    name: "John Doe",
+    date: "24th September 2023",
+    topic: "Lorem ipsum dolor ",
+    review:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.",
+    rate: 3,
   },
 ];
 

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // small
 // fullWidth
 // transparent
+// icon
 
 const Button = (props) => {
   return (
@@ -17,7 +18,11 @@ const Button = (props) => {
         className={`relative shadow-btn py-2 z-10 overflow-hidden group border-[2px] border-primary ${
           props.roundedFull ? "rounded-full" : "rounded-xl"
         } ${props.small ? "px-8 text-sm" : "px-10 text-lg"}
-        ${props.fullWidth ? "w-full" : null}`}
+        ${props.fullWidth ? "w-full" : null}
+        ${props.offShadow ? "!shadow-none" : null}
+        ${props.noRounded ? "!rounded-none" : null}`}
+
+        onClick={props.onClick && props.onClick}
       >
         <div
           className={`absolute w-full h-full top-0 duration-300 ${
@@ -27,13 +32,14 @@ const Button = (props) => {
           }`}
         ></div>
         <div
-          className={`relative ${
+          className={`relative flex gap-2 items-center justify-center ${
             props.transparent
               ? "text-primary group-hover:text-white"
               : "text-white group-hover:text-primary"
           }`}
         >
           {props.name}
+          {props.icon}
         </div>
       </motion.button>
     </Link>

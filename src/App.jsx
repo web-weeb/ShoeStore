@@ -1,17 +1,10 @@
-import { BrowserRouter } from "react-router-dom";
-import {
-  Hero,
-  Contact,
-  Category,
-  Footer,
-  Product,
-  Navbar,
-  All_Products,
-  Product_Details,
-} from "./components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Footer, Navbar } from "./components";
 import "./App.css";
-import Circle from "./components/Circle";
 import Metadata from "./components/Metadata";
+import ProductDetails from "./pages/ProductDetails";
+import AllProducts from "./pages/AllProducts";
+import MainPage from "./pages/MainPage";
 const App = () => {
   return (
     <>
@@ -24,16 +17,11 @@ const App = () => {
       {/* changes ☝️ */}
       <BrowserRouter>
         <Navbar />
-        <div className="min-h-screen justify-center flex items-center relative max-w-[1540px] mx-auto">
-          <Circle position={"top-left"} />
-          <Circle position={"bottom-left"} />
-          <Hero />
-        </div>
-        <Category />
-        <Product />
-        <All_Products />
-        <Product_Details />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/product/detail" element={<ProductDetails />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </>

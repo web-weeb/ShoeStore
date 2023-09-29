@@ -32,6 +32,10 @@
     background-position: center;
   }
 
+  a.active{
+    color: #F37937;
+  }
+
   .montserrat {
     font-family: 'Montserrat', sans-serif;
   }

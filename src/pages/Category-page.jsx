@@ -1,8 +1,5 @@
-import React from "react";
-import SectionWrapper from "../hoc/SectionWrapper";
-import Button from "./Button";
-import { Star, colorstar, plus } from "../assets/icons";
 import { womenscat, menscat, kidscat } from "../assets/Images";
+import { Button } from "../components";
 
 const cat = [
   { name: "card1", img: womenscat, btnname: "Women's", id: 1 },
@@ -11,7 +8,6 @@ const cat = [
 ];
 
 const Cards = (props) => {
-  console.log(props);
   return (
     <>
       <div className="w-1/3 h-full">
@@ -29,20 +25,21 @@ const Cards = (props) => {
 const Category = () => {
   return (
     <>
-      <div className="flex flex-row gap-5 mx-36 mt-44 mb-56 h-4/5">
-        {cat.map((card, i) => {
-          return (
-            <Cards
-              name={card.name}
-              img={card.img}
-              key={i}
-              btnname={card.btnname}
-            />
-          );
-        })}
-      </div>
+        <section className="mx-auto px-8 max-w-[1440px] py-6 min-h-screen" id="category">
+        <div className="flex flex-row gap-5 mx-36 mt-44 mb-56 h-4/5">
+          {cat.map((card, i) => {
+            return (
+              <Cards
+                name={card.name}
+                img={card.img}
+                key={i}
+                btnname={card.btnname}
+              />
+            );
+          })}
+        </div>
+        </section>
     </>
   );
 };
-
-export default SectionWrapper(Category, "category");
+export default Category;
