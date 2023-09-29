@@ -16,29 +16,31 @@ const CardsCollection = (props) => {
 };
 
 const Essential_collection = () => {
-    return (
-      <>
-        {/* ESSENTIAL COLLECTION */}
-        <div>
-          <div className="flex flex-col justify-center items-center gap-14 min-h-screen w-[1274px] mx-auto">
-            <div className="grid grid-cols-3 gap-10">
-              {nikeTechData.map((item, index) => (
-                <CardsCollection src={item.url} key={index} />
-              ))}
-            </div>
-            <div className="h-[92px] flex flex-col justify-center items-center gap-6">
-              <h1 className="text-5xl font-bold">ESSENTIAL COLLECTIONS</h1>
-              <h5 className="text-primary">
-                Essential itmes for your daily life.
-              </h5>
-            </div>
-            <div>
-              <Button name="MORE" roundedFull small />
-            </div>
+  return (
+    <>
+      {/* ESSENTIAL COLLECTION */}
+      <div>
+        <div className="flex flex-col justify-center items-center gap-14 min-h-screen max-w-[1274px] mx-auto">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+            {nikeTechData.map((item, index) => (
+              <CardsCollection src={item.url} key={index} />
+            ))}
+          </div>
+          <div className="h-[92px] flex flex-col justify-center items-center gap-6">
+            <h1 className="text-5xl font-bold text-center">
+              ESSENTIAL COLLECTIONS
+            </h1>
+            <h5 className="text-primary">
+              Essential itmes for your daily life.
+            </h5>
+          </div>
+          <div>
+            <Button name="MORE" roundedFull small />
           </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 };
 
 export default Essential_collection;

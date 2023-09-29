@@ -10,7 +10,7 @@ const cat = [
 const Cards = (props) => {
   return (
     <>
-      <div className="w-1/3 h-full">
+      <div className="md:w-1/2 lg:w-1/3 h-full p-4">
         <div id={props.id}>
           <img src={props.img} alt={props.name} />
         </div>
@@ -25,8 +25,8 @@ const Cards = (props) => {
 const Category = () => {
   return (
     <>
-        <section className="mx-auto px-8 max-w-[1440px] py-6 min-h-screen" id="category">
-        <div className="flex flex-row gap-5 mx-36 mt-44 mb-56 h-4/5">
+      <section className="mx-auto px-8 max-w-[1440px] py-12 " id="category">
+        <div className="flex items-center max-lg:flex-wrap justify-center mx-16 min-h-screen max-w-7xl">
           {cat.map((card, i) => {
             return (
               <Cards
@@ -38,7 +38,7 @@ const Category = () => {
             );
           })}
         </div>
-        </section>
+      </section>
     </>
   );
 };

@@ -12,6 +12,7 @@ import Circle from "./Circle";
 import Additional_shoe from "./Additional_shoe";
 import Button from "./Button";
 import Metadata from "./Metadata";
+import Filter from "./Filter";
 
 export {
   Navbar,
@@ -27,5 +28,6 @@ export {
   Circle,
   Additional_shoe,
   Button,
-    Metadata,
+  Metadata,
+  Filter,
 };

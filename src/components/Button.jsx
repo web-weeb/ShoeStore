@@ -21,7 +21,6 @@ const Button = (props) => {
         ${props.fullWidth ? "w-full" : null}
         ${props.offShadow ? "!shadow-none" : null}
         ${props.noRounded ? "!rounded-none" : null}`}
-
         onClick={props.onClick && props.onClick}
       >
         <div

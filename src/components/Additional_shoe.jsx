@@ -5,7 +5,7 @@ import { xtrashoe } from "../constants/index";
 const Additional_shoe = () => {
   return (
     <>
-      <div className="mb-12">
+      <div className="mb-12 px-10">
         <div className="flex flex-col gap-5 my-12">
           <div className=" text-sm">
             How Others Are Wearing It <br /> Upload your photo or mention @Nike
@@ -13,8 +13,8 @@ const Additional_shoe = () => {
           </div>
           <Button name={"Upload your photo"} roundedFull transparent />
         </div>
-        <div className="">
-          You might also like
+        <div>
+          <h4 className="ms-1">You might also like</h4>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 w-full">
             {xtrashoe.map((item, index) => {
               return (

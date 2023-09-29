@@ -1,8 +1,9 @@
+import { SlidersHorizontal } from "lucide-react";
 import { filter, sort } from "../assets/icons";
 import { useState } from "react";
+import { BsChevronDown } from "react-icons/bs";
 const Product_Filter = () => {
-
-const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -21,9 +22,15 @@ const [isOpen, setIsOpen] = useState(false);
         <div className="p-2 flex">
           <ul className="hidden md:flex gap-14 items-center text-sm">
             <li className="flex justify-center items-center gap-2">
-              <h3 className="text-2xl">Show Filters</h3>
+              <h4 className="text-xl">Show Filters</h4>
+              <button>
+                <SlidersHorizontal size={20} />
+              </button>
+            </li>
+            <li className="flex justify-center items-center gap-2">
+              <h3 className="text-2xl">Sort By</h3>
               <button onClick={toggleDropdown}>
-                <img src={filter} alt="" />
+                <BsChevronDown size={20} />
               </button>
               {isOpen && (
                 <div className="origin-bottom absolute top-16 z-10  mt-2 w-48 rounded-md shadow-lg">
@@ -50,12 +57,6 @@ const [isOpen, setIsOpen] = useState(false);
                 </div>
               )}
             </li>
-            <li className="flex justify-center items-center gap-2">
-              <h3 className="text-2xl">Sort By</h3>
-              <button href="">
-                <img src={sort} alt="" />
-              </button>
-            </li>
           </ul>
         </div>
         {/* Product_Filter items end */}
@@ -66,6 +67,3 @@ const [isOpen, setIsOpen] = useState(false);
 };
 
 export default Product_Filter;
-
-
-

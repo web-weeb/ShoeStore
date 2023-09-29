@@ -3,8 +3,30 @@ import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { productDetailsimg, sbtn, review } from "../constants";
 import Button from "./Button";
-import sort from "../assets/icons/sort-icon.svg";
 import { RiHeart2Fill, RiShoppingBag3Fill } from "react-icons/ri";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { AnimatePresence, motion } from "framer-motion";
+
+const hideShowAnimation = {
+  initial: {
+    opacity: 0,
+    height: 0,
+    overflow: "hidden",
+  },
+  animate: {
+    opacity: 1,
+    height: "auto",
+    overflow: "visible",
+  },
+  exit: {
+    opacity: 0,
+    height: 0,
+    overflow: "hidden",
+  },
+  transition: {
+    duration: 0.5,
+  },
+};
 
 const RightProductDetails = () => {
   const [deli, setDeli] = useState(false);
@@ -63,14 +85,21 @@ const RightProductDetails = () => {
             </div>
           </div>
           {/* size buttons */}
-          <div className="grid grid-cols-7 gap-1 mt-2">
+          <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-3 gap-1 mt-2 sm:grid-cols-2 grid-cols-2">
             {sbtn.map((item, index) => (
-              <Button key={index} name={item.size} transparent fullWidth noRounded offShadow />
+              <Button
+                key={index}
+                name={item.size}
+                transparent
+                fullWidth
+                noRounded
+                offShadow
+              />
             ))}
           </div>
         </div>
         {/* Two Buttons */}
-        <div className="grid grid-row-2 gap-4 mt-8">
+        <div className="grid grid-row-2 max-xl:max-w-xs gap-4 mt-8 max-xl:ms-auto">
           <Button
             roundedFull
             name="Add to bag"
@@ -107,19 +136,27 @@ const RightProductDetails = () => {
             <div className="flex justify-between my-auto">
               <h4>Delivery & Returns</h4>
               <button href="" onClick={delivery}>
-                <img src={sort} alt="" />
+                <BsChevronDown />
               </button>
             </div>
-            <div
-              className={`my-8 text-[Mukta-Vaani] ${deli ? "flex" : "hidden"}`}
-            >
-              <p>
-                All purchases are subject to delivery fees. <br />• Standard
-                delivery 4-9 business days Orders are processed and delivered
-                Monday - Friday (excluding public holidays) Nike Members enjoy
-                free returns.
-              </p>
-            </div>
+            <AnimatePresence>
+              {deli && (
+                <motion.div
+                  variants={hideShowAnimation}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition="transition"
+                >
+                  <p className="mt-8">
+                    All purchases are subject to delivery fees. <br />• Standard
+                    delivery 4-9 business days Orders are processed and
+                    delivered Monday - Friday (excluding public holidays) Nike
+                    Members enjoy free returns.
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           {/* Delivery ends */}
           {/* break line */}
@@ -128,41 +165,21 @@ const RightProductDetails = () => {
           <div className="flex flex-col gap-2">
             {/* main rating */}
             <div className="flex justify-between">
-              <div className="text-[Prompt] text-4xl font-normal">
-                Reviews(10)
-              </div>
+              <div className="text-2xl font-medium">Reviews(10)</div>
               <div className="flex items-center gap-1">
                 {/* connect proper data here */}
                 {[1, 2, 3, 4].map((i) => {
                   return (
                     <>
-                      <IconContext.Provider
-                        value={{
-                          color: "#F37937",
-                          className: "global-class-name",
-                          size: "30px",
-                        }}
-                      >
-                        <div>
-                          <AiFillStar key={i} />
-                        </div>
-                      </IconContext.Provider>
+                      <AiFillStar key={i} size={24} className="text-primary" />
                     </>
                   );
                 })}
-                <IconContext.Provider
-                  value={{
-                    color: "#F37937",
-                    className: "global-class-name",
-                    size: "30px",
-                  }}
-                >
-                  <div>
-                    <AiOutlineStar />
-                  </div>
-                </IconContext.Provider>
+
+                <AiOutlineStar size={24} className="text-primary" />
+
                 <button href="" onClick={Rev}>
-                  <img src={sort} alt="" />
+                  <BsChevronDown />
                 </button>
               </div>
             </div>
@@ -205,85 +222,102 @@ const RightProductDetails = () => {
             <div className="underline mt-1 w-2/6">Write a review</div>
           </div>
           {/* review details */}
-          <div className={`${rev ? "flex flex-col" : "hidden"}`}>
-            {review.map((items, index) => (
-              <>
-                <div className="flex flex-col gap-2 mt-4" key={index}>
-                  <div className="text-[Mukta-Vaani] text-xl">
-                    {items.topic}
-                  </div>
-                  <div className="flex gap-6">
-                    <div className="flex items-center gap-1">
-                      {[1, 2, 3, 4].map((i) => {
-                        return (
-                          <>
-                            <IconContext.Provider
-                              value={{
-                                color: "#F37937",
-                                className: "global-class-name",
-                                size: "20px",
-                              }}
-                            >
-                              <div>
-                                <AiFillStar key={i} />
-                              </div>
-                            </IconContext.Provider>
-                          </>
-                        );
-                      })}
-                      <IconContext.Provider
-                        value={{
-                          color: "#F37937",
-                          className: "global-class-name",
-                          size: "20px",
-                        }}
-                      >
-                        <div>
-                          <AiOutlineStar />
+          <AnimatePresence>
+            {rev && (
+              <motion.div
+                variants={hideShowAnimation}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition="transition"
+              >
+                {review.map((items, index) => (
+                  <>
+                    <div className="flex flex-col gap-2 mt-4" key={index}>
+                      <div className="text-[Mukta-Vaani] text-xl">
+                        {items.topic}
+                      </div>
+                      <div className="flex gap-6">
+                        <div className="flex items-center gap-1">
+                          {[1, 2, 3, 4].map((i) => {
+                            return (
+                              <>
+                                <IconContext.Provider
+                                  value={{
+                                    color: "#F37937",
+                                    className: "global-class-name",
+                                    size: "20px",
+                                  }}
+                                >
+                                  <div>
+                                    <AiFillStar key={i} />
+                                  </div>
+                                </IconContext.Provider>
+                              </>
+                            );
+                          })}
+                          <IconContext.Provider
+                            value={{
+                              color: "#F37937",
+                              className: "global-class-name",
+                              size: "20px",
+                            }}
+                          >
+                            <div>
+                              <AiOutlineStar />
+                            </div>
+                          </IconContext.Provider>
                         </div>
-                      </IconContext.Provider>
+                        <div className="text-[Mukta-Vaani] text-[#A0A0A0] text-xl">
+                          {items.name} - {items.date}
+                        </div>
+                      </div>
+                      <div className="text-[Mukta-Vaani] text-xl font-[400]">
+                        {items.review}
+                      </div>
+                      <div className="underline mt-1 w-2/6">More</div>
+                      <div className="border border-[#A0A0A0] mt-8 mb-5"></div>
                     </div>
-                    <div className="text-[Mukta-Vaani] text-[#A0A0A0] text-xl">
-                      {items.name} - {items.date}
-                    </div>
-                  </div>
-                  <div className="text-[Mukta-Vaani] text-xl font-[400]">
-                    {items.review}
-                  </div>
-                  <div className="underline mt-1 w-2/6">More</div>
-                  <div className="border border-[#A0A0A0] mt-8 mb-5"></div>
-                </div>
-              </>
-            ))}
-          </div>
+                  </>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <div className="border border-[#A0A0A0] my-8 mb-5"></div>
           {/* Product Information */}
           <div className="flex flex-col">
             <div className="flex justify-between my-auto">
               <h4>Product Information</h4>
-              <button href="" onClick={Info}>
-                <img src={sort} alt="" />
+              <button onClick={Info}>
+                <BsChevronDown />
               </button>
             </div>
-            <div
-              className={`my-8 text-[Mukta-Vaani] ${
-                info ? "flex flex-col" : "hidden"
-              }`}
-            >
-              <p>
-                <span className="text-[12px]">
-                  Declaration of Importer: Direct import by the individual
-                  customer
-                </span>
-                <br />
-                Marketed by: Nike Global Trading B.V. Singapore Branch,30 Pasir
-                Panjang Road, #10-31/32, Mapletree Business City, Singapore 117
-                440
-              </p>
-              <p className="font-extrabold text-xl mt-5">
-                Net Quantity : 1 pair
-              </p>
-            </div>
+            <AnimatePresence>
+              {info && (
+                <motion.div
+                  variants={hideShowAnimation}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition="transition"
+                >
+                  <p>
+                    <p className="text-[14px]">
+                      Declaration of Importer: Direct import by the individual
+                      customer
+                    </p>
+                    <br />
+                    Marketed by: Nike Global Trading B.V. Singapore Branch,30
+                    Pasir Panjang Road, #10-31/32, Mapletree Business City,
+                    Singapore 117 440
+                  </p>
+                  <p className="font-extrabold text-xl mt-5">
+                    Net Quantity : 1 pair
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

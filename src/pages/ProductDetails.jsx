@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RightProductDetails } from "../components";
-import {Additional_shoe} from "../components";
+import { Additional_shoe } from "../components";
 import { productDetailsimg } from "../constants";
 import { Fragment } from "react";
 
@@ -14,13 +14,13 @@ const ProductDetails = () => {
   };
   return (
     <>
-      <section className="min-h-screen relative max-w-[1540px] mx-auto">
-        <div className="grid grid-cols-2 justify-center relative p-4 mx-6">
+      <section className="min-h-screen py-12 relative max-w-[1540px] mx-auto">
+        <div className="grid xl:grid-cols-2 grid-cols-1 justify-center relative p-4 mx-6">
           {/* left side start */}
-          <div className="flex flex-row gap-4">
-            <div className="overflow-y-auto max-h-[615px]">
-              <div className="flex flex-col gap-2">
-                {productDetailsimg.map((product,i) => (
+          <div className="flex flex-row max-md:flex-col gap-4 justify-center max-xl:py-4">
+            <div className="overflow-y-auto max-md:order-2 max-h-[615px]">
+              <div className="flex flex-wrap  md:flex-col gap-2">
+                {productDetailsimg.map((product, i) => (
                   <Fragment key={i}>
                     {product.img.map((image, imageIndex) => (
                       <img
@@ -35,17 +35,17 @@ const ProductDetails = () => {
                 ))}
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex max-md:order-1 justify-center items-center">
               <img
                 src={mainImage}
                 alt=""
-                className="w-[535px] h-[615px] rounded-[5px] object-cover"
+                className="w-[535px] rounded-[5px] object-cover object-center"
               />
             </div>
           </div>
           {/* left side end */}
           {/* right side start */}
-          <div className="flex justify-center pl-28 items-center">
+          <div className="flex justify-center xl:pl-28 max-xl:pt-4 items-center">
             <div className="overflow-y-auto max-h-[615px]">
               <RightProductDetails />
             </div>

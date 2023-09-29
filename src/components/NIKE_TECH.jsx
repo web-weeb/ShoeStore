@@ -7,11 +7,11 @@ const NIKE_TECH = () => {
     <>
       <div>
         <p>Featured</p>
-        <div className="grid grid-cols-3 gap-0">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
           {nikeTechData.map((item, index) => (
             <img
               key={index}
-              className="w-[80%] h-[100%]"
+              className="w-full h-full rounded-md object-cover object-center"
               src={item.url}
               alt=""
             />
