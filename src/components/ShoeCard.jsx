@@ -6,18 +6,18 @@ const ShoeCard = (props) => {
   return (
     <>
       <div
-        className="relative w-44 h-32 p-5 mt-16 rounded-3xl shadow-hero-card bg-[#fafafa]"
+        className="relative w-44 h-[8.5rem] p-5 mt-16 rounded-3xl shadow-hero-card bg-[#fafafa]"
         id={props.id}
       >
         {/* image start */}
-        <div className="absolute pt-1 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150">
+        <div className="absolute pb-2 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150">
           <img
             src={props.img}
             alt="shoe"
             onClick={() => {
               props.setShowCard(props.img);
             }}
-            className="cursor-pointer w-full h-full object-cover object-center"
+            className="cursor-pointer w-full h-full object-cover object-center rotate-[-15deg]"
           />
         </div>
         {/*  image end */}

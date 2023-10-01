@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="min-h-screen justify-center flex items-center relative max-w-[1540px] mx-auto px-4 py-6"
+        className="min-h-screen justify-center flex items-center relative max-w-[1440px] mx-auto px-4 py-6"
         id="Home"
       >
         <Circle position={"top-left"} />
