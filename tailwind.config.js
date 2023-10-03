@@ -19,6 +19,9 @@ export default {
         "hero-pattern":
           "url('./assets/Images/Noise-Texture'), lightgray -47.906px 0px / 106.654% 100% no-repeat",
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

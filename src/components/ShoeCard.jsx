@@ -10,7 +10,7 @@ const ShoeCard = (props) => {
         id={props.id}
       >
         {/* image start */}
-        <div className="absolute pb-2 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150">
+        <div className="absolute pb-2 h-40 w-40 -top-full -left-0 translate-y-1/4 scale-150 overflow-hidden">
           <img
             src={props.img}
             alt="shoe"

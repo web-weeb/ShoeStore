@@ -24,7 +24,7 @@ const MPV_collection = () => {
           colors and classic styles
         </p>
         <div className="flex justify-center my-10">
-          <Button name={"More"} roundedFull />
+          <Button name={"More"} roundedFull small />
         </div>
       </div>
     </>

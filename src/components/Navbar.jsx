@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
       {/* nav start  */}
-      <div className="flex relative z-40 justify-between px-6 py-4">
+      <div className="flex relative z-40 justify-between sm:px-6 sm:py-4 py-1 px-3">
         {/* logo start  */}
         <div className="items-center flex w-14">
           <img src={Vector} alt="" />
@@ -51,7 +51,7 @@ const Navbar = () => {
           </ul>
           <ul className="flex md:hidden">
             <li
-              className="p-4 cursor-pointer"
+              className="sm:p-4 cursor-pointer"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
