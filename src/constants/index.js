@@ -386,3 +386,82 @@ export const xtrashoe = [
     price: "17.00",
   },
 ];
+
+export const footitems1 = [
+  {
+    des: "Find a Store",
+    link: "#",
+    color: "text-white",
+  },
+  {
+    des: "Become a member",
+    link: "#",
+    color: "text-white",
+  },
+  {
+    des: "Send us feedback",
+    link: "#",
+    color: "text-white",
+  },
+  {
+    des: "Students discount",
+    link: "#",
+    color: "text-white",
+  },
+];
+
+export const footitems2 = [
+  {
+    des: "GET HELP",
+    link: "#",
+    color: "text-white",
+  },
+  {
+    des: "Order status",
+    link: "#",
+  },
+  {
+    des: "Delivery",
+    link: "#",
+  },
+  {
+    des: "Returns",
+    link: "#",
+  },
+  {
+    des: "Payment options",
+    link: "#",
+  },
+  {
+    des: "Contact us",
+    link: "#",
+  },
+  {
+    des: "All other enquiries",
+    link: "#",
+  },
+];
+
+export const footitems3 = [
+  {
+    des: "ABOUT NIKE",
+    link: "#",
+    color: "text-white",
+  },
+  {
+    des: "News",
+    link: "#",
+  },
+  {
+    des: "Careers",
+    link: "#",
+  },
+  {
+    des: "Investors",
+    link: "#",
+  },
+  {
+    des: "Sustainability",
+    link: "#",
+  },
+];

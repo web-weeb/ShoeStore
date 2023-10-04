@@ -13,6 +13,7 @@ import Additional_shoe from "./Additional_shoe";
 import Button from "./Button";
 import Metadata from "./Metadata";
 import Filter from "./Filter";
+import Footcards from "./Footcards";
 
 export {
   Navbar,
@@ -30,4 +31,5 @@ export {
   Button,
   Metadata,
   Filter,
+  Footcards,
 };
