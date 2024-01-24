@@ -5,6 +5,11 @@ import Metadata from "./components/Metadata";
 import ProductDetails from "./pages/ProductDetails";
 import AllProducts from "./pages/AllProducts";
 import MainPage from "./pages/MainPage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Logout from "./pages/Logout";
+import Contact from "./pages/Contact";
+import Testing from "./pages/Testing";
 const App = () => {
   return (
     <>
@@ -20,7 +25,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/products" element={<AllProducts />} />
-          <Route path="/product/detail" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/testing" element={<Testing />} />
         </Routes>
         <Footer />
       </BrowserRouter>

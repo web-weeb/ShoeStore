@@ -3,8 +3,13 @@ import { cards } from "../constants";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Shoe } from "../assets/Images";
+import { useProductContext } from "../store/product";
 
 const Home = () => {
+  const { isLoading, featureProducts } = useProductContext();
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
   const [showCard, setShowCard] = useState("");
   console.log(showCard);
   return (
@@ -36,14 +41,16 @@ const Home = () => {
             {/* Price section ends here */}
             {/* Shoe card */}
             <div className="flex max-sm:justify-center gap-8 max-lg:flex-wrap mt-8">
-              {cards.map((card, i) => {
+              {featureProducts.map((card, i) => {
+                console.log(card);
                 return (
                   <ShoeCard
                     name={card.name}
-                    description={card.description}
+                    description={card.title}
                     rate={card.rate}
-                    img={card.img}
-                    id={i}
+                    img={card.imageFiles[0].url}
+                    price={card.price}
+                    id={card._id}
                     key={i}
                     setShowCard={setShowCard}
                   />

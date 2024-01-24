@@ -11,7 +11,7 @@ const Footcards = (props) => {
               props.upper ? "uppercase" : "normal-case"
             } cursor-pointer`}
           >
-            <a href="#">{items.des} </a>
+            {items.des}
           </h6>
         ))}
       </div>

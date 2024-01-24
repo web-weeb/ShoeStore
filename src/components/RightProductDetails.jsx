@@ -6,6 +6,7 @@ import Button from "./Button";
 import { RiHeart2Fill, RiShoppingBag3Fill } from "react-icons/ri";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import FormatPrice from "../Helpers/FormatPrice";
 
 const hideShowAnimation = {
   initial: {
@@ -28,7 +29,7 @@ const hideShowAnimation = {
   },
 };
 
-const RightProductDetails = () => {
+const RightProductDetails = (props) => {
   const [deli, setDeli] = useState(false);
   const delivery = () => {
     setDeli(!deli);
@@ -54,9 +55,9 @@ const RightProductDetails = () => {
     <>
       <div className="flex flex-col gap-2 w-full h-auto">
         {/* Description */}
-        <h4 className="text-[32px]">Jordan Max Aura 5</h4>
-        <h5 className="text-[28px]">Men’s Shoes</h5>
-        <h5 className="text-[28px]">MRP : {formatCurrency(13450)}</h5>
+        <h4 className="text-[32px]">{props.name}</h4>
+        <h5 className="text-[28px]">{props.category}</h5>
+        <h5 className="text-[28px]">MRP :<FormatPrice price={props.price}/></h5>
         <div className="text-[#A0A0A0] font-[Mukta-Vaani] text-[16px] font-[400]">
           inc. of all taxes <br /> (Also includes all applicable duties)
         </div>
@@ -116,16 +117,9 @@ const RightProductDetails = () => {
         </div>
         {/* Details*/}
         <div className="mt-14">
-          <h3 className="text-xl">
-            When you need a shoe that's ready 24/7, it's gotta be the Max Aura
-            5. Inspired by the AJ3, this pair of kicks puts a modern spin on the
-            classic. They're made from durable leather and textiles that sit
-            atop a heel of Nike Air cushioning so you can walk, run or skate all
-            day and still have fresh feeling soles.
-          </h3>
+          <h3 className="text-xl">{props.description}</h3>
           <ul className="mt-10 list-inside list-disc">
-            <li>Color Shown: Cement Grey/ Topaz</li>
-            <li>Gold/White/Anthracite</li>
+            <li>Color Shown: {props.colors}</li>
             <li>Style: DZ4353-007</li>
           </ul>
           <div className="underline mt-10 w-2/6">View Product Details</div>
@@ -165,7 +159,7 @@ const RightProductDetails = () => {
           <div className="flex flex-col gap-2">
             {/* main rating */}
             <div className="flex justify-between">
-              <div className="text-2xl font-medium">Reviews(10)</div>
+              <div className="text-2xl font-medium">Reviews{props.reviews}</div>
               <div className="flex items-center gap-1">
                 {/* connect proper data here */}
                 {[1, 2, 3, 4].map((i) => {
@@ -215,7 +209,7 @@ const RightProductDetails = () => {
                   </div>
                 </IconContext.Provider>
                 <div className="text-[Mukta-Vaani] text-xl ml-6">
-                  {review[0].rate} Stars
+                  {props.stars} Stars
                 </div>
               </div>
             </div>
@@ -313,7 +307,7 @@ const RightProductDetails = () => {
                     Singapore 117 440
                   </p>
                   <p className="font-extrabold text-xl mt-5">
-                    Net Quantity : 1 pair
+                    Net Quantity : {props.stock}
                   </p>
                 </motion.div>
               )}
