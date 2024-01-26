@@ -11,7 +11,7 @@ const API = "http://localhost:4000/api/data/getAllProducts";
 
 const ProductDetails = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();
-  console.log(singleProduct);
+  // console.log(singleProduct);
   const { id } = useParams();
   console.log();
 
@@ -32,7 +32,7 @@ const ProductDetails = () => {
 
       useEffect(() => {
         getSingleProduct(`${API}?id=${id}`);
-      }, []);
+      }, [id]);
 
 
     const [mainImage, setMainImage] = useState(
@@ -63,19 +63,19 @@ const ProductDetails = () => {
             <div className="flex flex-row max-md:flex-col gap-4 justify-center max-xl:py-4">
               <div className="overflow-y-auto max-md:order-2 max-h-[615px]">
                 <div className="flex flex-wrap  md:flex-col gap-2">
-                  {productDetailsimg.map((product, i) => (
-                    <Fragment key={i}>
-                      {product.img.map((image, imageIndex) => (
-                        <img
-                          key={imageIndex}
-                          src={image}
-                          alt=""
-                          className="w-[95px] h-[81px] rounded-[5px] object-cover cursor-pointer"
-                          onMouseOver={() => handleImageClick(image)}
-                        />
-                      ))}
+                    <Fragment>
+                      {Array(6)
+                        .fill()
+                        .map((_, imageIndex) => (
+                            <img
+                              key={imageIndex}
+                              src={mainImages}
+                              alt=""
+                              className="w-[95px] h-[81px] rounded-[5px] object-cover cursor-pointer"
+                              onMouseOver={() => handleImageClick(mainImages)}
+                            />
+                        ))}
                     </Fragment>
-                  ))}
                 </div>
               </div>
               <div className="flex max-md:order-1 justify-center items-center">
@@ -92,6 +92,7 @@ const ProductDetails = () => {
             {/* right side start */}
             <div className="flex justify-center xl:pl-28 max-xl:pt-4 items-center">
               <div className="overflow-y-auto max-h-[615px]">
+                {/* RightProductDetails is here */}
                 <RightProductDetails
                   name={name}
                   title={title}
@@ -105,6 +106,7 @@ const ProductDetails = () => {
                   reviews={reviews}
                   stars={stars}
                 />
+                {/* RightProductDetails is end */}
               </div>
             </div>
             {/* right side end */}

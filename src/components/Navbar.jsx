@@ -5,9 +5,12 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 import { RiCloseLine } from "react-icons/ri";
 import { useAuth } from "../store/auth";
+import { FaShoppingCart } from "react-icons/fa";
+import { useCartContext } from "../store/cart";
 
 const Navbar = () => {
   const { isUserLoggedIn } = useAuth();
+  const { total_item } = useCartContext();
   const [nav, setNav] = useState("Home");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -52,7 +55,7 @@ const Navbar = () => {
               </li>
             ))}
 
-            <li className="px-6">
+            <li className="px-2">
               {isUserLoggedIn ? (
                 <NavLink to="/logout">Logout</NavLink>
               ) : (
@@ -79,6 +82,20 @@ const Navbar = () => {
                     </div>
                   )}
                 </>
+              )}
+            </li>
+            <li className="px-2">
+              {isUserLoggedIn ? (
+                <>
+                  <NavLink to="/card">
+                    <FaShoppingCart size={20} />
+                    <span className="absolute top-4 right-7 rounded-full bg-black text-white text-xs px-1">
+                      {total_item}
+                    </span>
+                  </NavLink>
+                </>
+              ) : (
+                <></>
               )}
             </li>
           </ul>
@@ -157,6 +174,20 @@ const Navbar = () => {
                       </>
                     )}
                   </li>
+                </li>
+                <li className="px-2">
+                  {isUserLoggedIn ? (
+                    <>
+                      <NavLink to="/card">
+                        <FaShoppingCart size={26} />
+                        <span className="absolute -mt-8 ml-4 rounded-full bg-black text-white text-xs px-1">
+                          {total_item}
+                        </span>
+                      </NavLink>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </li>
               </ul>
             </div>

@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import Logout from "./pages/Logout";
 import Contact from "./pages/Contact";
 import Testing from "./pages/Testing";
+import CardDetails from "./components/CardDetails";
 const App = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/card" element={<CardDetails />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/login" element={<Login />} />
