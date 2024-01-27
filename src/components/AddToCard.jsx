@@ -28,7 +28,13 @@ const AddToCard = ({product}) => {
           transparent
           icon={<RiHeart2Fill />}
         />
-        <NavLink to="/card" onClick={() => addToCart(id, color, amount, product)}>
+        <NavLink
+          to="/card"
+          onClick={() => {
+            addToCart(id, color, amount, product);
+            window.alert("Item added to cart!");
+          }}
+        >
           <Button
             roundedFull
             name="Add to bag"
