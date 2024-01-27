@@ -4,7 +4,7 @@ import reducer from "../reducer/productReducer";
 
 export const AppContext = createContext();
 
-const API = "http://localhost:4000/api/data/getAllProducts";
+const API = "https://shoe-backend-6w6r.onrender.com/api/data/getAllProducts";
 
 export const AppProvider = ({ children }) => {
 

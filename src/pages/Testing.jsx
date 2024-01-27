@@ -63,7 +63,7 @@ const Testing = () => {
       });
 
       const response = await fetch(
-        "http://localhost:4000/api/data/addProduct",
+        "https://shoe-backend-6w6r.onrender.com/api/data/addProduct",
         {
           method: "POST",
           body: formData,

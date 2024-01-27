@@ -80,13 +80,16 @@ const cartReducer = (state, action) => {
     };
   }
 
-  if (action.type === "REMOVE_ITEM"){
-    let updatedCart = state.cart.filter((curItem) => curItem._id !== action.payload);
-    return {
-      ...state,
-      cart: updatedCart,
-    };
-  } 
+if (action.type === "REMOVE_ITEM") {
+  console.log("Removing item with ID:", action.payload);
+  let updatedCart = state.cart.filter(
+    (curItem) => curItem.id !== action.payload
+  );
+  return {
+    ...state,
+    cart: updatedCart,
+  };
+}
   
   // cler all cart items 
  if (action.type === "CLEAR_CART"){

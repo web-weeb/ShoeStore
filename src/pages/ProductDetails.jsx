@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { useProductContext } from "../store/product";
 // import { getSingleProduct } from "../store/product";
 
-const API = "http://localhost:4000/api/data/getAllProducts";
+const API = "https://shoe-backend-6w6r.onrender.com/api/data/getAllProducts";
 
 const ProductDetails = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();

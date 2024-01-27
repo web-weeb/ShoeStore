@@ -57,7 +57,7 @@ const CartItems = ({_id, name, imageFiles, color, price, amount}) => {
         {/* Remove Icon */}
         <div className="flex gap-5 justify-center items-center ml-32">
           <button>
-            <AiFillDelete size={24} color="red" cursor="pointer" onClick={()=> removeItem(_id)}/>
+            <AiFillDelete size={24} color="red" cursor="pointer" onClick={()=> removeItem(_id+color)}/>
           </button>
         </div>
       </div>
